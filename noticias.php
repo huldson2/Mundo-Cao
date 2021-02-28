@@ -1,46 +1,10 @@
 <?php
 
-/////////////////////////////////////////
-// Configurações inicias da aplicação! //
-/////////////////////////////////////////
 require ('_config.php');
-
-///////////////////////////////////////
-// Configurações iniciais da página! //
-///////////////////////////////////////
-
-/*
-    $titulo --> Define o título "desta" página.
-    Se = "", usa o título e o slogan do site.
-*/
-$titulo = "Notícias Sobre Gatos";
-
-/*
-    $css --> Carrega o CSS adicional "desta" página.
-    Se "", não carrega CSS adicional.
-    Exemplo: /css/template.css
-*/
+$titulo = "Notícias Sobre cães";
 $css = "/css/noticias.css";
-
-/*
-    $js --> Carrega o JavaScript adicional "desta" página.
-    Se "", não usa JavaScript adicional.
-    Exemplo: /js/template.js
-*/
 $js = "/js/noticias.js";
-
-/*
-    $menu --> Define o item ativo do menu "nesta" página.
-    Se "", nenhum item será marcado.
-    Valores possíveis: "", "artigos", "contatos", "sobre", "procurar", "noticias".
-    Qualquer outro valor = "".
-*/
 $menu = "noticias";
-
-/////////////////////////////////////////////////////
-// Seus códigos PHP para esta página começam aqui! //
-/////////////////////////////////////////////////////
-
 // Obtendo artigos aleatórios
 $sql = "SELECT id_artigo, imagem, titulo FROM `artigos` WHERE status = 'ativo' ORDER BY RAND() LIMIT 3;";
 $res = $conn->query($sql);
@@ -63,12 +27,6 @@ HTML;
 endwhile;
 $artigos .= '';
 
-//////////////////////////////////////////////////////
-// Seus códigos PHP para esta página terminam aqui! //
-// Teoricamente, não precisa alterar nada abaixo!   //
-//////////////////////////////////////////////////////
-
-// Template de abertura - cabeçalho
 require ('_header.php');
 
 ?> 
@@ -87,7 +45,6 @@ require ('_header.php');
 
 <?php
 
-// Template de fechamento - rodapé
 require ('_footer.php');
 
 ?>

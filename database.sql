@@ -4,7 +4,7 @@
 
 -- Apaga o banco de dados caso ele exista
 -- ALERTA!!! REMOVA ESTA LINHA APÓS O BANCO ESTAR PRONTO
-DROP DATABASE IF EXISTS gatolandia;
+
 
 -- Cria a base de dados
 CREATE DATABASE mundocao CHARACTER SET utf8 COLLATE utf8_general_ci;

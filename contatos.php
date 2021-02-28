@@ -1,45 +1,10 @@
 <?php
 
-/////////////////////////////////////////
-// Configurações inicias da aplicação! //
-/////////////////////////////////////////
 require ('_config.php');
-
-///////////////////////////////////////
-// Configurações iniciais da página! //
-///////////////////////////////////////
-
-/*
-    $titulo --> Define o título "desta" página.
-    Se = "", usa o título e o slogan do site.
-*/
 $titulo = "Faça Contato";
-
-/*
-    $css --> Carrega o CSS adicional "desta" página.
-    Se "", não carrega CSS adicional.
-    Exemplo: /css/template.css
-*/
 $css = "/css/contatos.css";
-
-/*
-    $js --> Carrega o JavaScript adicional "desta" página.
-    Se "", não usa JavaScript adicional.
-    Exemplo: /js/template.js
-*/
 $js = "/js/contatos.js";
-
-/*
-    $menu --> Seleciona o item ativo do menu "nesta" página.
-    Se "", nenhum item será marcado.
-    Valores possíveis: "", "artigos", "contatos", "sobre", "procurar", "noticias".
-    Qualquer outro valor = "".
-*/
 $menu = "contatos";
-
-/////////////////////////////////////////////////////
-// Seus códigos PHP para esta página começam aqui! //
-/////////////////////////////////////////////////////
 
 // Declara variáveis
 $nome = $email = $assunto = $mensagem = $erro = $msgerro = $msgok = '';
@@ -108,9 +73,9 @@ INSERT INTO contatos (
         if($conn->query($sql)) :
 
             // Enviar por e-mail ao admin do site
-            @mail('admin@gatolandia.com', 'Novo contato', "Olá!\n\nUm novo contato foi enviado para o Gatolândia.\n\nObrigado.");
+            @mail('huldson2@gmail.com', 'Novo contato', "Olá!\n\nUm novo contato foi enviado para o Mundo Cão.\n\nObrigado.");
 
-            // Primeiro no do remetente
+            // Primeiro nome do remetente
             $n = explode(' ', $nome);
 
             // Mensagem de agradecimento
@@ -137,12 +102,6 @@ HTML;
 
 endif;
 
-//////////////////////////////////////////////////////
-// Seus códigos PHP para esta página terminam aqui! //
-// Teoricamente, não precisa alterar nada abaixo!   //
-//////////////////////////////////////////////////////
-
-// Template de abertura - cabeçalho
 require('_header.php');
 
 ?>
@@ -162,7 +121,7 @@ require('_header.php');
 
 ?>
 
-        <p>Preencha o formulário abaixo para entrar em contato com a equipe do Gatolândia.</p>
+        <p>Preencha o formulário abaixo para entrar em contato com a equipe do Mundo Cão.</p>
 
         <div id="msgerro" class="msg"></div>
 
@@ -222,7 +181,6 @@ require('_header.php');
 
 <?php
 
-// Template de fechamento - rodapé
 require('_footer.php');
 
 ?>
