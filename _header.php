@@ -1,21 +1,16 @@
 <?php
 
-// Tratando o título --> $titulo
 if ( $titulo == "" ) {
     $titulo = "Mundo Cão .::. Patas e faros";
 } else {
     $titulo = "{$titulo} .::. Mundo Cão";
 }
-
-// Tratando o CSS adicional --> $css
 if ( $css == "" ) {
     $css = null;
 } else {
-    // Escapeando as aspas da string usando "\"
     $css = "\t<link rel=\"stylesheet\" href=\"{$css}\">\n";
 }
 
-// Tratando o JavaScript adicional --> $js
 if ( $js == "" ) {
     $js = null;
 } else {
@@ -42,6 +37,11 @@ if ( $js == "" ) {
     <header class="header">
         <a href="index.php"><img src="/img/logo02.jpg" alt="Mundo Cão" title="Home Page do Mundo Cão"></a>
         <h1>Mundo Cão<small>Entre faros e patas</small></h1>
+
+        <div class="show-login">
+        <button  id= "btnlogin"><i class="fas fa-sign-in-alt fa-fw"></i>
+        Login</button>
+        </div>
     </header>
  
     <nav>

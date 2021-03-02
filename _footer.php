@@ -18,6 +18,8 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/jquery.rss.min.js"></script>
 <script src="/js/global.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="js/app.js"></script>
 <?php echo $js ?>
 </body>
 </html>

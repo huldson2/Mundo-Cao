@@ -58,13 +58,17 @@
 
 .slideshow {
     margin-top: 1rem;
-}
+  }
 
 
 
 
 .mySlides {display: none}
-.slideshow img {vertical-align: middle;}
+.slideshow img {
+  vertical-align: middle;
+  max-height: 500px;
+ 
+}
 
 /* Slideshow container */
 .slideshow-container {
