@@ -27,6 +27,10 @@ if ( $js == "" ) {
     <link rel="stylesheet" href="/css/global.css">
 <?php echo $css ?>
     <link rel="stylesheet" href="/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+
+
     <title><?php echo $titulo ?></title>
 </head>
 <body> 
@@ -38,9 +42,13 @@ if ( $js == "" ) {
         <a href="index.php"><img src="/img/logo02.jpg" alt="Mundo Cão" title="Home Page do Mundo Cão"></a>
         <h1>Mundo Cão<small>Entre faros e patas</small></h1>
 
-        <div class="show-login">
+        <div *ngIf="auth.user | async as user; else showLogin">
+      <img src="{{ user.photoURL }}" alt="{{ user.displayName }}" title="Perfil de {{ user.displayName }}." routerLink="/profile">
+    </div>
+        
+        <div class="show-login"> <a href="/login.php">
         <button  id= "btnlogin"><i class="fas fa-sign-in-alt fa-fw"></i>
-        Login</button>
+        Login</button></a>
         </div>
     </header>
  

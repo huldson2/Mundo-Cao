@@ -38,9 +38,8 @@ require ('_header.php');
           class="fas fa-address-card fa-fw"></i>&nbsp; Editar perfil</button>
           <small>Perfil editado no '{{ user.providerData[0].providerId }}'.</small>
 
-      <button class="primary center" routerLink="/logout"><i class="fas fa-sign-out-alt fa-fw"></i>&nbsp; Logout / Sair</button>
+      <button class="primary center" id="logoutButton"><i class="fas fa-sign-out-alt fa-fw"></i>&nbsp; Logout / Sair</button>
     </div>
-
 <?php
 
 require ('_footer.php');

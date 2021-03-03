@@ -1,7 +1,20 @@
-var btnlogin = document.getElementsByClassName ('show-login');
+var authGoogle = document.getElementById ('authGoogle');
+var authFacebook = document.getElementById ('authFacebook');
 
-btnlogin.addEventListener('click', function(){
-    firebase.auth()
+var provider = new firebase.auth.GoogleAuthProvider();
+
+authGoogle.addEventListener('click', function(){
+  var provider = new firebase.auth.GoogleAuthProvider();
+  signIn(provider);
+});
+
+authFacebook.addEventListener('click', function(){
+  var provider = new firebase.auth.FacebookAuthProvider();
+  signIn(provider);
+});
+
+function signIn(provider) {
+  firebase.auth()
     .signInWithPopup(provider)
     .then((result) => {
       /** @type {firebase.auth.OAuthCredential} */
@@ -22,4 +35,4 @@ btnlogin.addEventListener('click', function(){
       var credential = error.credential;
       // ...
     });
-});
+}
