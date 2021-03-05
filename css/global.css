@@ -67,8 +67,8 @@ body {
 /* Cabeçalho */
 
 .header {
-    background: #1821757e;
-
+    background-image: linear-gradient(to right, #8198a6,#8198a6,#537b947a, #18754a7e);
+    background-attachment: fixed;
     display: flex;
     align-items: center;
 }
@@ -209,6 +209,8 @@ body {
     left: 0;
     box-shadow: 5px 5px 5px #888;
     min-width: 70%;
+    z-index: 10000;
+
 }
 
 @media (min-width: 575px) {
