@@ -3,7 +3,7 @@
     <footer class="footer">
         <a href="/" title="Ir para a página inicial"><i class="fas fa-fw fa-home"></i></a>
         <div>
-            &copy; Copyright 2021 Huldson Rodrigues
+            &copy; 2021 Huldson Rodrigues
             <div>
                 <a href="/contatos.php">&nbsp;Faça contato&nbsp;</a>
                 |

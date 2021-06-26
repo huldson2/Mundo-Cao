@@ -19,7 +19,8 @@ require ('_header.php');
 
 <h2>Sobre o Autor</h2>
 <p>Sou Huldson, estudande te programação web e dono de uma amigo de quatro patas.</p>
-<img class="responsivo" src="https://picsum.photos/400/300" alt="Imagem aleatória">
+<img class="responsivo" src="/img/cao02.jpeg" alt="Cão">
+
 
 <h2>Sobre Sua Privacidade</h2> 
 <p>Privacidade é importante e por isso direciono a todos vocês, visitantes e autores, para observar nossas políticas de privacidade através do link:</p>
